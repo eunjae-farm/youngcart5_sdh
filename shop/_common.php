@@ -2,6 +2,7 @@
 include_once('../common.php');
 
 if (isset($_REQUEST['sort']) && !preg_match("/(--|#|\/\*|\*\/)/", $_REQUEST['sort']))  {
+    //trim함수 : 문자열 앞뒤 공백제거
     $sort = trim($_REQUEST['sort']);
     $sort = preg_replace("/[\<\>\'\"\\\'\\\"\%\=\(\)\s]/", "", $sort);
 } else {
